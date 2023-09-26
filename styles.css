@@ -1,11 +1,21 @@
 :root {
-    --color-header-background:black;
+    --color-header-background:green;
     --color-title:white;
 }
 * {
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
     margin:0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding: 10px;
+    padding-top: 30px;
+    align-items: center;
 }

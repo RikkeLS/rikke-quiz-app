@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 300px;
+    padding: 10px;
+}
+.card p {
+    align-self: center;
+    text-align: center;
+    font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hashtags-container {
+    display: flex;
+    padding:2px;
+    gap:5px;
+    /* background-color: antiquewhite; */
+}
+
+.hashtag {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: lightgray;
+}
+
