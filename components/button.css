@@ -1,7 +1,13 @@
 .button-answer {
-    width: 100px;
+    width: 120px;
+    height:40px;
     align-self: center;
+    margin-top:20px;
     margin-bottom:20px;
+    border: 2px solid black;
+    background-color: white;
+    font-size:medium;
+
 }
 
 .bookmark-image {
