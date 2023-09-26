@@ -11,7 +11,7 @@ footer {
     z-index: 10;   
 }
 footer img {
-    height: calc(0.8*var(--height-footer));
+    height: calc(0.7*var(--height-footer));
 }
 
 nav { 
