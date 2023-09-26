@@ -13,5 +13,16 @@ footer img {
     height: 50px;
 }
 
-nav {
+nav { 
+    display: flex;
+}
+
+.nav-item-box {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    /* background-color: aquamarine; */
+}
+.nav-home-box {
+    background-color: blue;
 }
