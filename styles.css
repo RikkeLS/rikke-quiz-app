@@ -1,3 +1,11 @@
+:root {
+    --color-header-background:black;
+    --color-title:white;
+}
 * {
     box-sizing: border-box;
+}
+
+body {
+    margin:0;
 }
