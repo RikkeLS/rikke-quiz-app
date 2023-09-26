@@ -10,5 +10,15 @@
 }
 
 .hashtags-container {
+    display: flex;
+    padding:2px;
+    gap:5px;
     /* background-color: antiquewhite; */
+}
+
+.hashtag {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: lightgray;
 }
