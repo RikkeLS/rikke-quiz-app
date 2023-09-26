@@ -4,13 +4,13 @@
     border: 3px solid black;
     width: 300px;
     padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 .card p {
     align-self: center;
     text-align: center;
     font-size: medium;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .hashtags-container {
