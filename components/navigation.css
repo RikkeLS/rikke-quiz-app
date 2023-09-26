@@ -26,6 +26,6 @@ nav {
     height: var(--height-footer);
     /* background-color: aquamarine; */
 }
-.nav-home-box {
+.nav-current {
     background-color:var(--color-current-page);
 }
