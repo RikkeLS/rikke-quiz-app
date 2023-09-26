@@ -3,7 +3,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: var(--height-footer);
-    border-top: 2px solid black;
+    /* border-top: 2px solid black; */
     background-color: var(--color-footer-background);
     /* to stay on top of other elements at the bottom and stick to it */
     position:sticky;
