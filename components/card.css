@@ -4,6 +4,8 @@
     border: 3px solid black;
     width: 300px;
     padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .card p {
     align-self: center;
