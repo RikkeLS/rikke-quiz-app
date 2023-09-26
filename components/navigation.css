@@ -11,7 +11,7 @@ footer {
     z-index: 10;   
 }
 footer img {
-    height: calc(0.8*var(--height-footer));
+    height: calc(0.7*var(--height-footer));
 }
 
 nav { 
@@ -26,6 +26,6 @@ nav {
     height: var(--height-footer);
     /* background-color: aquamarine; */
 }
-.nav-home-box {
+.nav-current {
     background-color:var(--color-current-page);
 }
