@@ -3,29 +3,11 @@
     align-self: center;
     margin-bottom:20px;
 }
-/* .button-answer:active {
-    content: 'Answer';
-}
-.button-answer:active:after {
-    content: 'Answer';
-} */
 
-.button-bookmark {
-    width: 30px;
-    height: 30px;
+.bookmark-image {
+    width: 40px;
+    height: 40px;
     align-self: flex-end;
     position:relative;
-    bottom:25px;
+    bottom:20px;
 }
-
-/* .button-bookmark:after {
-    background-color: black;
-    display: block;
-}
-.button-bookmark:active:after {
-    background-color: black;
-} */
-/* .button-bookmark:active {
-    background-color: black;
-    display: block;
-} */
