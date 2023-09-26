@@ -3,6 +3,7 @@
     --color-title:white;
     --color-footer-background:green;
     --height-footer:80px;
+    --color-current-page:darkgreen;
 }
 * {
     box-sizing: border-box;
