@@ -3,7 +3,12 @@
     flex-direction: column;
     border: 3px solid black;
     width: 300px;
+    padding: 10px;
 }
 .card p {
     align-self: center;
+}
+
+.hashtags-container {
+    /* background-color: antiquewhite; */
 }
