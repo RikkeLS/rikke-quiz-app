@@ -1,8 +1,13 @@
 footer {
     display: flex;
     justify-content: center;
-    height: 50px;
+    align-items: center;
+    height: 70px;
     background-color: blueviolet;
+    /* to stay on top of other elements at the bottom and stick to it */
+    position:sticky;
+    bottom: 0px;
+    z-index: 10;   
 }
 footer img {
     height: 50px;
