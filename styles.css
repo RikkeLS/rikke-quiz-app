@@ -1,6 +1,8 @@
 :root {
     --color-header-background:green;
     --color-title:white;
+    --color-footer-background:green;
+    --height-footer:80px;
 }
 * {
     box-sizing: border-box;
