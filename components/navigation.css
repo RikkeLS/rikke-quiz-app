@@ -1,6 +1,11 @@
 footer {
-    height: 40px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
     background-color: blueviolet;
+}
+footer img {
+    height: 50px;
 }
 
 nav {
