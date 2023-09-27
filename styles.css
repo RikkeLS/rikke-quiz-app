@@ -1,5 +1,6 @@
 :root {
     --color-header-background:green;
+    --color-header-border:black; 
     --color-title:white;
     --color-footer-background:green;
     --height-footer:80px;
