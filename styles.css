@@ -1,9 +1,13 @@
 :root {
     --color-header-background:green;
+    --color-header-border:black; 
     --color-title:white;
     --color-footer-background:green;
     --height-footer:80px;
     --color-current-page:darkgreen;
+    --color-button-answer-background: rgba(230, 227, 227, 0.648);
+    --color-button-answer-border: black ;
+    --color-button-answer-text: black ;
 }
 * {
     box-sizing: border-box;

@@ -2,6 +2,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: var(--color-header-background);
+    border-bottom: 2px solid var(--color-header-border);
     /* to stay on top of other elements at the top and stick to it */
     position:sticky;
     top: 0px;
