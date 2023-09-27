@@ -1,0 +1,8 @@
+.profile_imageName-container {
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+.profile-image {
+    /* height: 100px; */
+}
