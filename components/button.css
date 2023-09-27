@@ -1,6 +1,7 @@
 .button-answer {
-    width: 120px;
-    height:40px;
+    /* width: 120px; */
+    /* height:40px; */
+    padding: 10px;
     align-self: center;
     margin-top:20px;
     margin-bottom:20px;
