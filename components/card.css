@@ -18,6 +18,7 @@
 }
 
 .hashtags-container {
+    list-style-type: none; /* a list I don't want bullets for */
     display: flex;
     padding:2px;
     gap:5px;
