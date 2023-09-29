@@ -5,12 +5,16 @@
     width: 300px;
     padding: 10px;
 }
-.card_question {
+.card_question, .card_answer {
     align-self: center;
     text-align: center;
     font-size: medium;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.card_answer {
+    color:purple;
 }
 
 .hashtags-container {
