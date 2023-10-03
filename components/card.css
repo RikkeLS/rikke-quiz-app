@@ -20,8 +20,10 @@
 .card__hashtags-container {
     list-style-type: none; /* a list I don't want bullets for */
     display: flex;
-    padding:2px;
+    padding:10px;
     gap:5px;
+    position:relative;
+    top: 15px;
     /* background-color: antiquewhite; */
 }
 
