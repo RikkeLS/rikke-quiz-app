@@ -5,7 +5,7 @@
     width: 300px;
     padding: 10px;
 }
-.card_question {
+.card_question, .card_answer {
     align-self: center;
     text-align: center;
     font-size: medium;
@@ -13,7 +13,12 @@
     padding-right: 10px;
 }
 
+.card_answer {
+    color:purple;
+}
+
 .hashtags-container {
+    list-style-type: none; /* a list I don't want bullets for */
     display: flex;
     padding:2px;
     gap:5px;
