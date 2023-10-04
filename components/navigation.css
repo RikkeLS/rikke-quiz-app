@@ -24,7 +24,6 @@ nav {
     align-items: center;
     width: 33.3vw;
     height: var(--height-footer);
-    /* background-color: aquamarine; */
 }
 .nav-current {
     background-color:var(--color-current-page);
