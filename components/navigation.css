@@ -18,13 +18,13 @@ nav {
     display: flex;
 }
 
-.nav-item-box {
+nav a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 33.3vw;
     height: var(--height-footer);
 }
-.nav-current {
+.nav__a-current {
     background-color:var(--color-current-page);
 }
