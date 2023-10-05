@@ -1,3 +1,10 @@
+/* import all the stylesheets here:*/
+@import "./components/button.css";
+@import "./components/navigation.css";
+@import "./components/card.css";
+@import "./components/header.css";
+@import "./components/profile.css";
+
 :root {
     --color-header-background:green;
     --color-header-border:black; 
