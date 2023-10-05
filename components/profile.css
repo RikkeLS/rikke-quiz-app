@@ -35,10 +35,27 @@
     gap: 20px;
 }
 .counters__question-counter, .counters__bookmark-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(200, 211, 117);
     padding: 5px;
+
+}
+
+.counters__question-counter__image {
+    height: 30px;
+    padding-right: 10px;
+}
+.counters__bookmark-counter__image {
+    height: 30px;
+    padding-right: 10px;
+}
+
+.image-source {
+    font-size: x-small;
 }
 
 /* Settings: */
@@ -61,5 +78,4 @@
 .settings__dark-mode-section {
     display: flex;
     justify-content: space-between;
-   
 }
