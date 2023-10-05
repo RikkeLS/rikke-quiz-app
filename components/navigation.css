@@ -10,7 +10,7 @@ footer {
     bottom: 0px;
     z-index: 10;   
 }
-footer img {
+.nav__a__image {
     height: calc(0.7*var(--height-footer));
 }
 
