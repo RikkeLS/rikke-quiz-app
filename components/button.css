@@ -1,4 +1,4 @@
-.button-answer {
+.card__button-answer {
     /* width: 120px; */
     /* height:40px; */
     padding: 10px;
@@ -11,7 +11,7 @@
     font-size:medium;
 }
 
-.bookmark-image {
+.card__bookmark {
     width: 40px;
     height: 40px;
     align-self: flex-end;
