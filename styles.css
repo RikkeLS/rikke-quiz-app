@@ -6,6 +6,7 @@
 @import "./components/profile.css";
 
 :root {
+    --color-std-text: blue;
     --color-header-background:green;
     --color-header-border:black; 
     --color-title:white;
@@ -15,6 +16,13 @@
     --color-button-answer-background: rgba(230, 227, 227, 0.648);
     --color-button-answer-border: black ;
     --color-button-answer-text: black ;
+    --color-hasttag-text:brown;
+    --color-hasttag-background:lightgray;
+    --color-answer-text: purple;
+    --color-profilepage__about-border:green;
+    --color-profilepage__counter: rgb(231, 171, 231);
+    --color-profilepage__counter-border: black;
+    --width-profilepage__counter-border: 2px;
 }
 * {
     box-sizing: border-box;

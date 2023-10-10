@@ -2,7 +2,88 @@
     display: flex;
     align-items: center;
     gap:40px;
+    color:var(--color-std-text);
 }
-.profile-image {
-    /* height: 100px; */
+
+/* About me section: */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 8px; */
+    /* padding: 0; */
+}
+.about-section__title {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left:20px;
+    color:var(--color-std-text);
+}
+.about-section__text {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left:10px;
+    color:var(--color-std-text);
+    border-left: 3px solid var(--color-profilepage__about-border);
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+/* Counters: */
+.counters{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+}
+.counters__question-counter, .counters__bookmark-counter {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: var(--width-profilepage__counter-border) solid var(--color-profilepage__counter-border);
+    border-radius: 10px;
+    background-color: var(--color-profilepage__counter);
+    padding: 5px;
+    /* move a bit to the left to place elements around the center: */
+    position: relative;
+    left:-20px;
+
+}
+
+.counters__question-counter__image {
+    height: 30px;
+    padding-right: 10px;
+}
+.counters__bookmark-counter__image {
+    height: 30px;
+    padding-right: 10px;
+}
+
+
+/* Settings: */
+.settings {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    color:var(--color-std-text);
+    width: 80vw;
+}
+
+
+/* why does the class not work? */
+/* .settings__title { */
+.settings h2 {
+    position: relative;
+    right:20px;
+    color:var(--color-std-text);
+}
+
+.settings__dark-mode-section {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    color:var(--color-std-text);
 }

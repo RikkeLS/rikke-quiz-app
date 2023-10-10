@@ -11,10 +11,11 @@
     font-size: medium;
     padding-left: 10px;
     padding-right: 10px;
+    color:var(--color-std-text);
 }
 
 .card__answer {
-    color:purple;
+    color:var(--color-answer-text);
 }
 
 .card__hashtags-container {
@@ -31,6 +32,7 @@
     border: 2px solid black;
     border-radius: 5px;
     padding: 3px;
-    background-color: lightgray;
+    background-color: var(--color-hasttag-background);
+    color:var(--color-hasttag-text);
 }
 
