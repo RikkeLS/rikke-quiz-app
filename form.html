@@ -14,19 +14,20 @@
     <main>
         <form class="form" data-js="form-question">
             <label class="form__label" for="question-textarea" >Your Question:</label>
-            <textarea class="form__question-textarea" name="question-textarea" id="question-textarea" > 
-            </textarea>
+            <textarea class="form__question-textarea" name="newQuestionText" id="question-textarea">new question text </textarea>
             <label class="form__label" for="answer-textarea" >Your Answer:</label>
-            <textarea class="form__answer-textarea" name="answer-textarea" id="answer-textarea"> 
-            </textarea>
+            <textarea class="form__answer-textarea" name="newAnswerText" id="answer-textarea">new answer text </textarea>
             <label class="form__label" for="tag-inputtext" >Tag:</label>
-            <input class="form__tag-inputtext" name="tag-inputtext" id="tag-inputtext" type="text"> 
+            <input class="form__tag-inputtext" name="newTagText" id="tag-inputtext" type="text" value="new tag">  
             </input>
             <section class="form__buttons">
                 <button type="submit"> Submit </button>
                 <button type="reset">Reset fields</button>
             </section>
         </form>
+        <section class="created-questions-container" data-js="created-questions-container">
+
+        </section>
     </main>
     <footer>
         <nav>
