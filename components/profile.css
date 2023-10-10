@@ -33,15 +33,20 @@
     list-style-type: none;
     display: flex;
     gap: 20px;
+    /* align-items: center; */
+    /* justify-content: space-around; */
 }
 .counters__question-counter, .counters__bookmark-counter {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(200, 211, 117);
     padding: 5px;
+    /* move a bit to the left to place elements around the center: */
+    position: relative;
+    left:-20px;
 
 }
 
