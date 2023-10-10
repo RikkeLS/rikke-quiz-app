@@ -13,6 +13,9 @@ footer {
 .nav__a__image {
     height: calc(0.7*var(--height-navbar));
 }
+.nav__a__image-form {
+    height: calc(0.85*var(--height-navbar));
+}
 
 nav { 
     display: flex;
