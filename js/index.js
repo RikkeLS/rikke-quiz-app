@@ -4,7 +4,6 @@ console.clear()
 const bookmark = document.querySelector('[data-js="card__bookmark"]');
 const answerButton = document.querySelector('[data-js="card__button-answer"]');
 const answerToHide = document.querySelector('[data-js="card__answer"]');
-const questionForm = document.querySelector('[data-js="form-question"]');
 
 // click event for bookmark with arrow function:
 bookmark.addEventListener('click', (event)=> {
@@ -34,7 +33,3 @@ answerButton.addEventListener('click', (event) => {
     }
 });
 
-// get data from the form to create a card
-// questionForm.addEventListener('submit', (event) => {
-    
-// });
