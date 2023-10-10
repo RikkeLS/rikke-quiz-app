@@ -11,8 +11,7 @@ questionForm.addEventListener('submit', (event) => {
     // console.log('submitted form');
     formData = new FormData(event.target);
     dataObject = Object.fromEntries(formData);
-    console.log(dataObject);
-
+    // console.log(dataObject);
     createCard(dataObject);
 });
 
@@ -20,17 +19,48 @@ function createCard(dataObject) {
     const questionText=dataObject['newQuestionText'];
     const answerText=dataObject['newAnswerText'];
     const tagText=dataObject['newTagText'];
-    const card_element = elementWithClass('section','card')
-    card_element.textContent = questionText;
-    console.log(card_element) 
+    // creating simple elements with given class:
+    const cardElement = elementWithClass('section','card');
+    const questionElement = elementWithClass('p','card__question');
+    const answerElement = elementWithClass('p','card__answer');
+    const answerButton = elementWithClass('button','card__button-answer');
+    // answerElement.setAttribute('hidden',true);
+    const hashtagContainer = elementWithClass('ul','card__hashtags-container');
+    const hashtagElement = elementWithClass('li','card__hashtag-container__hashtag');
+    const bookmarkElement = elementWithClass('img','card__bookmark')
     
-    newQuestionsContainer.append(card_element);
-    // document.body.append(card_element);
+    // attributes for the image element for the bookmark:
+    bookmarkElement.setAttribute('src','./resources/bookmark.png');
+    bookmarkElement.setAttribute('alt','bookmark')
+
+
+
+
+    //insert text in elements:
+    questionElement.textContent = questionText;
+    answerElement.textContent = answerText;
+    answerButton.textContent = 'Show Answer';
+    answerButton.textContent = 'Hide Answer'
+    hashtagElement.textContent = '#'+tagText;
+
+
+    //add data-js:
+    answerButton.setAttribute('data-js','card__button-answer' )
+    answerElement.setAttribute('data-js','card__answer' )
+    bookmarkElement.setAttribute('data-js','card__bookmark')
+
+    // append/nest the elements:
+    hashtagContainer.append(hashtagElement)
+    cardElement.append(bookmarkElement,questionElement,answerButton,answerElement,hashtagContainer)
+
+
+    // console.log(card_element) 
+    
+    newQuestionsContainer.append(cardElement);
 }
 
 function elementWithClass(typeOfElement,className) {
     const newElement = document.createElement(typeOfElement);
     newElement.classList.add(className);
     return newElement;
-    // newElement
 }
