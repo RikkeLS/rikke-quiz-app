@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js/index.js" defer></script>
+    <script src="./js/form.js" defer></script>
+
+    <title>Question Form</title>
+</head>
+<body>
+    <header>
+        <h1 >Quiz App</h1>
+    </header>
+    <main>
+        <form class="form" data-js="form-question">
+            <label class="form__label" for="question-textarea" >Your Question:</label>
+            <textarea class="form__question-textarea" name="newQuestionText" id="question-textarea" data-js="question-textarea"
+            maxlength=150 > </textarea>
+            <p class="form__question-characters-left" data-js="form__question-characters-left">150 characters left</p>
+
+
+            <label class="form__label" for="answer-textarea" >Your Answer:</label>
+            <textarea class="form__answer-textarea" name="newAnswerText" id="answer-textarea" data-js="answer-textarea"
+            maxlength=150 > </textarea>
+            <p class="form__answer-characters-left" data-js="form__answer-characters-left">150 characters left</p>
+
+
+            <label class="form__label" for="tag-inputtext" >Tag:</label>
+            <input class="form__tag-inputtext" name="newTagText" id="tag-inputtext" type="text" value="newTag">  
+            </input>
+            <section class="form__buttons">
+                <button type="submit"> Submit </button>
+                <button type="reset">Reset fields</button>
+            </section>
+        </form>
+        <section class="created-questions-container" data-js="created-questions-container">
+
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="./index.html"> <img class="nav__a__image nav__a__image-home" src="./resources/home.png" alt="home-icon"> </a> 
+            <a href="./bookmarks.html"> <img class="nav__a__image nav__a__image-bookmark" src="./resources/bookmark_transparent.png" alt="bookmark-icon"> </a>
+            <a class="nav__a-current" href="./form.html"> <img class="nav__a__image nav__a__image-form" src="./resources/plus-circle_filled.svg" alt="form-icon"> </a>
+            <a href="./profile.html"> <img class="nav__a__image nav__a__image-profile" src="./resources/profile.png" alt="profile-icon"> </a>
+        </nav>
+    </footer>
+
+</body>
+</html>

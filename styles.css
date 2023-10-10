@@ -4,6 +4,7 @@
 @import "./components/card.css";
 @import "./components/header.css";
 @import "./components/profile.css";
+@import "./components/form.css";
 
 :root {
     --color-std-text: blue;
@@ -33,7 +34,7 @@ body {
     margin:0;
 }
 
-main {
+main, .created-questions-container {
     display: flex;
     flex-direction: column;
     gap:20px;
