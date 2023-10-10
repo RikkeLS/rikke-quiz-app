@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap:40px;
+    color:var(--color-std-text);
 }
 
 /* About me section: */
@@ -16,14 +17,16 @@
     padding: 0;
     margin: 0;
     position: relative;
-    left:20px
+    left:20px;
+    color:var(--color-std-text);
 }
 .about-section__text {
     padding: 0;
     margin: 0;
     position: relative;
     left:10px;
-    border-left: 2px solid black;
+    color:var(--color-std-text);
+    border-left: 3px solid var(--color-profilepage__about-border);
     padding-left: 5px;
     padding-right: 10px;
 }
@@ -40,9 +43,9 @@
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    border: 2px solid black;
+    border: var(--width-profilepage__counter-border) solid var(--color-profilepage__counter-border);
     border-radius: 10px;
-    background-color: rgb(200, 211, 117);
+    background-color: var(--color-profilepage__counter);
     padding: 5px;
     /* move a bit to the left to place elements around the center: */
     position: relative;
@@ -59,16 +62,13 @@
     padding-right: 10px;
 }
 
-.image-source {
-    font-size: x-small;
-}
 
 /* Settings: */
 .settings {
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */
-    
+    color:var(--color-std-text);
     width: 80vw;
 }
 
@@ -78,9 +78,11 @@
 .settings h2 {
     position: relative;
     right:20px;
+    color:var(--color-std-text);
 }
 
 .settings__dark-mode-section {
     display: flex;
     justify-content: space-between;
+    color:var(--color-std-text);
 }
