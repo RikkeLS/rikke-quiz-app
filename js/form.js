@@ -3,7 +3,10 @@ console.clear()
 // query selection:
 const questionForm = document.querySelector('[data-js="form-question"]');
 const newQuestionsContainer = document.querySelector('[data-js="created-questions-container"]')
-
+const charactersLeftQuestion = document.querySelector('[data-js="form__question-characters-left"]')
+const charactersLeftAnswer = document.querySelector('[data-js="form__answer-characters-left"]')
+const questionTextarea =  document.querySelector('[data-js="question-textarea"]')
+const answerTextarea =  document.querySelector('[data-js="answer-textarea"]')
 
 // get data from the form to create a card
 questionForm.addEventListener('submit', (event) => {
@@ -64,3 +67,23 @@ function elementWithClass(typeOfElement,className) {
     newElement.classList.add(className);
     return newElement;
 }
+
+//-- text characters left
+// charactersLeftQuestion.value = '150 characters left'
+
+questionTextarea.addEventListener('input',(event) => {
+    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
+    
+    numberOfCharactersLeft = 150-Number(charactersInText)
+    // console.log(charactersLeftQuestion.value);
+    charactersLeftQuestion.textContent = numberOfCharactersLeft+' characters left'
+    console.log(charactersInText);
+});
+
+answerTextarea.addEventListener('input',(event) => {
+    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
+    
+    numberOfCharactersLeft = 150-Number(charactersInText)
+    charactersLeftAnswer.textContent = numberOfCharactersLeft+' characters left'
+
+});
