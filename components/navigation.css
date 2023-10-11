@@ -25,7 +25,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33.3vw;
+    width: 25.0vw;
     height: var(--height-navbar);
 }
 .nav__a-current {
