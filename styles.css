@@ -42,3 +42,8 @@ main, .created-questions-container {
     padding-top: 30px;
     align-items: center;
 }
+
+main {
+    /* add space in bottom of every page, so nav is not in the way in the bottom */
+    margin-bottom: var(--height-navbar); 
+}

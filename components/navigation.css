@@ -6,7 +6,7 @@ footer {
     /* border-top: 2px solid black; */
     background-color: var(--color-footer-background);
     /* to stay on top of other elements at the bottom and stick to it */
-    position:sticky;
+    position:fixed;
     bottom: 0px;
     z-index: 10;   
 }
@@ -25,7 +25,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33.3vw;
+    width: 25.0vw;
     height: var(--height-navbar);
 }
 .nav__a-current {

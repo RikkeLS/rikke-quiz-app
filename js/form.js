@@ -11,11 +11,13 @@ const answerTextarea =  document.querySelector('[data-js="answer-textarea"]')
 // get data from the form to create a card
 questionForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // console.log('submitted form');
+
     formData = new FormData(event.target);
     dataObject = Object.fromEntries(formData);
-    // console.log(dataObject);
+
     createCard(dataObject);
+    //reset form after getting the data:
+    questionForm.reset()
 });
 
 function createCard(dataObject) {
@@ -25,41 +27,76 @@ function createCard(dataObject) {
     // creating simple elements with given class:
     const cardElement = elementWithClass('section','card');
     const questionElement = elementWithClass('p','card__question');
-    const answerElement = elementWithClass('p','card__answer');
+    const answerToHide = elementWithClass('p','card__answer');
     const answerButton = elementWithClass('button','card__button-answer');
-    // answerElement.setAttribute('hidden',true);
+    // answerToHide.setAttribute('hidden',true);
     const hashtagContainer = elementWithClass('ul','card__hashtags-container');
     const hashtagElement = elementWithClass('li','card__hashtag-container__hashtag');
-    const bookmarkElement = elementWithClass('img','card__bookmark')
+    const bookmark = elementWithClass('img','card__bookmark')
     
     // attributes for the image element for the bookmark:
-    bookmarkElement.setAttribute('src','./resources/bookmark.png');
-    bookmarkElement.setAttribute('alt','bookmark')
+    bookmark.setAttribute('src','./resources/bookmark.png');
+    bookmark.setAttribute('alt','bookmark')
 
 
 
 
     //insert text in elements:
     questionElement.textContent = questionText;
-    answerElement.textContent = answerText;
+    answerToHide.textContent = answerText;
     answerButton.textContent = 'Show Answer';
     answerButton.textContent = 'Hide Answer'
-    hashtagElement.textContent = '#'+tagText;
+    // only add '#' if tag is entered:
+    if (Boolean(tagText) === true) {
+        hashtagElement.textContent = '#'+tagText;    
+    }
+    if (Boolean(tagText) === false) {
+        hashtagElement.className='' ;// remove all classes     
+    }
+    
 
 
     //add data-js:
-    answerButton.setAttribute('data-js','card__button-answer' )
-    answerElement.setAttribute('data-js','card__answer' )
-    bookmarkElement.setAttribute('data-js','card__bookmark')
+    answerButton.setAttribute("data-js","card__button-answer");
+    answerToHide.setAttribute("data-js","card__answer");
+    bookmark.setAttribute("data-js","card__bookmark");
 
     // append/nest the elements:
     hashtagContainer.append(hashtagElement)
-    cardElement.append(bookmarkElement,questionElement,answerButton,answerElement,hashtagContainer)
+    cardElement.append(bookmark,questionElement,answerButton,answerToHide,hashtagContainer)
 
 
-    // console.log(card_element) 
-    
     newQuestionsContainer.append(cardElement);
+
+    //---- from index.js to do the button functions:
+
+    // click event for bookmark with arrow function:
+    bookmark.addEventListener('click', (event)=> {
+        const currentBookmark = bookmark.src; // gives a longer path, https://'more'
+        // cutting the string into just the filename
+    currentImageFilename=currentBookmark.split("/")[currentBookmark.split("/").length-1]
+    // gives a path which does not need to be cut
+    // const currentBookmark = bookmark.getAttribute('src') 
+
+    if (currentImageFilename === "bookmark_filled.png") {
+        bookmark.src = "./resources/bookmark.png"  
+    }
+    if (currentImageFilename === "bookmark.png") {
+        bookmark.src = "./resources/bookmark_filled.png"  
+    }
+    });
+
+    // click event for answer button, for hiding answer and change button text:
+    answerButton.addEventListener('click', (event) => {
+        answerToHide.toggleAttribute('hidden')
+        
+        if (answerToHide.hidden==true) {
+            answerButton.textContent = 'Show Answer'
+        }
+        if (answerToHide.hidden==false) {
+            answerButton.textContent = 'Hide Answer'
+        }
+    });
 }
 
 function elementWithClass(typeOfElement,className) {
@@ -69,21 +106,18 @@ function elementWithClass(typeOfElement,className) {
 }
 
 //-- text characters left
-// charactersLeftQuestion.value = '150 characters left'
 
+function charactersLeft(event) {
+    const charactersInText = event.target.value.length; 
+    return numberOfCharactersLeft = 150-Number(charactersInText)
+}
 questionTextarea.addEventListener('input',(event) => {
-    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
-    
-    numberOfCharactersLeft = 150-Number(charactersInText)
-    // console.log(charactersLeftQuestion.value);
-    charactersLeftQuestion.textContent = numberOfCharactersLeft+' characters left'
-    console.log(charactersInText);
+    charactersLeftQuestion.textContent = charactersLeft(event)+' characters left';
 });
 
 answerTextarea.addEventListener('input',(event) => {
-    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
-    
-    numberOfCharactersLeft = 150-Number(charactersInText)
-    charactersLeftAnswer.textContent = numberOfCharactersLeft+' characters left'
+    charactersLeftAnswer.textContent = charactersLeft(event)+' characters left'
 
 });
+
+
