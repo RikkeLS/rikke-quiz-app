@@ -22,3 +22,10 @@
 .settings__dark-mode-section__box {
     align-self: center;
 }
+
+.settings__dark-mode-section__box--button:hover {
+    background-color: purple;
+    color:white;
+    box-shadow: rgba(19, 63, 194, 0.876) 0px 10px 20px,
+      rgba(72, 15, 243, 0.895) 0px 15px 12px;
+  }
