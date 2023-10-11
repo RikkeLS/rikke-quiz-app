@@ -2,9 +2,11 @@ console.clear()
 
 const darkModeButton = document.querySelector('[data-js="settings__dark-mode-section__box--button"]');
 
-let Mode = 0;
+let Mode;
 darkModeButton.addEventListener('click', (event)=> {
-    
+    if (Boolean(Mode)=== false){
+        Mode = 0;
+    }
     
     if (Mode == 0) {
         document.documentElement.style.setProperty('--color-std-text', 'white');
@@ -23,5 +25,5 @@ darkModeButton.addEventListener('click', (event)=> {
         Mode = 0;
     }
 
-        
+
 })
