@@ -11,11 +11,13 @@ const answerTextarea =  document.querySelector('[data-js="answer-textarea"]')
 // get data from the form to create a card
 questionForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // console.log('submitted form');
+
     formData = new FormData(event.target);
     dataObject = Object.fromEntries(formData);
-    // console.log(dataObject);
+
     createCard(dataObject);
+    //reset form after getting the data:
+    questionForm.reset()
 });
 
 function createCard(dataObject) {
@@ -44,13 +46,21 @@ function createCard(dataObject) {
     answerElement.textContent = answerText;
     answerButton.textContent = 'Show Answer';
     answerButton.textContent = 'Hide Answer'
-    hashtagElement.textContent = '#'+tagText;
+    // only add '#' if tag is entered:
+    console.log(tagText)
+    if (Boolean(tagText) === true) {
+        hashtagElement.textContent = '#'+tagText;    
+    }
+    if (Boolean(tagText) === false) {
+        hashtagElement.className='' ;// remove all classes     
+    }
+    
 
 
     //add data-js:
-    answerButton.setAttribute('data-js','card__button-answer' )
-    answerElement.setAttribute('data-js','card__answer' )
-    bookmarkElement.setAttribute('data-js','card__bookmark')
+    answerButton.setAttribute("data-js","card__button-answer");
+    answerElement.setAttribute("data-js","card__answer");
+    bookmarkElement.setAttribute("data-js","card__bookmark");
 
     // append/nest the elements:
     hashtagContainer.append(hashtagElement)
@@ -69,21 +79,18 @@ function elementWithClass(typeOfElement,className) {
 }
 
 //-- text characters left
-// charactersLeftQuestion.value = '150 characters left'
 
+function charactersLeft(event) {
+    const charactersInText = event.target.value.length; 
+    return numberOfCharactersLeft = 150-Number(charactersInText)
+}
 questionTextarea.addEventListener('input',(event) => {
-    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
-    
-    numberOfCharactersLeft = 150-Number(charactersInText)
-    // console.log(charactersLeftQuestion.value);
-    charactersLeftQuestion.textContent = numberOfCharactersLeft+' characters left'
-    console.log(charactersInText);
+    charactersLeftQuestion.textContent = charactersLeft(event)+' characters left';
 });
 
 answerTextarea.addEventListener('input',(event) => {
-    const charactersInText = event.target.value.length; //questionTextarea.textContent.length
-    
-    numberOfCharactersLeft = 150-Number(charactersInText)
-    charactersLeftAnswer.textContent = numberOfCharactersLeft+' characters left'
+    charactersLeftAnswer.textContent = charactersLeft(event)+' characters left'
 
 });
+
+
