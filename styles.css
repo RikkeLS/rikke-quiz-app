@@ -8,6 +8,7 @@
 
 :root {
     --color-std-text: blue;
+    --color-std-background: white;
     --color-header-background:green;
     --color-header-border:black; 
     --color-title:white;
@@ -45,5 +46,6 @@ main, .created-questions-container {
 
 main {
     /* add space in bottom of every page, so nav is not in the way in the bottom */
-    margin-bottom: var(--height-navbar); 
+    margin-bottom: var(--height-navbar);
+    background-color:var(--color-std-background); 
 }
