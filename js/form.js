@@ -7,6 +7,8 @@ const charactersLeftQuestion = document.querySelector('[data-js="form__question-
 const charactersLeftAnswer = document.querySelector('[data-js="form__answer-characters-left"]')
 const questionTextarea =  document.querySelector('[data-js="question-textarea"]')
 const answerTextarea =  document.querySelector('[data-js="answer-textarea"]')
+const resetButton = document.querySelector('[data-js="form__buttons__reset-button"]')
+
 
 // get data from the form to create a card
 questionForm.addEventListener('submit', (event) => {
@@ -18,6 +20,7 @@ questionForm.addEventListener('submit', (event) => {
     createCard(dataObject);
     //reset form after getting the data:
     questionForm.reset()
+    resetCharacterLeftText()
 });
 
 function createCard(dataObject) {
@@ -97,6 +100,8 @@ function createCard(dataObject) {
             answerButton.textContent = 'Hide Answer'
         }
     });
+
+    // resetCharacterLeftText()
 }
 
 function elementWithClass(typeOfElement,className) {
@@ -107,9 +112,19 @@ function elementWithClass(typeOfElement,className) {
 
 //-- text characters left
 
+const maxlengthTextarea = 150;
+questionTextarea.setAttribute('maxlength',maxlengthTextarea)
+answerTextarea.setAttribute('maxlength',maxlengthTextarea)
+//starting/resetting text:
+resetCharacterLeftText()
+function resetCharacterLeftText() {
+charactersLeftQuestion.textContent = maxlengthTextarea+' characters left'
+charactersLeftAnswer.textContent = maxlengthTextarea+' characters left'
+}
+
 function charactersLeft(event) {
     const charactersInText = event.target.value.length; 
-    return numberOfCharactersLeft = 150-Number(charactersInText)
+    return numberOfCharactersLeft = maxlengthTextarea-Number(charactersInText)
 }
 questionTextarea.addEventListener('input',(event) => {
     charactersLeftQuestion.textContent = charactersLeft(event)+' characters left';
@@ -120,4 +135,6 @@ answerTextarea.addEventListener('input',(event) => {
 
 });
 
+// reset characters-left text when resetting the text areas:
+resetButton.addEventListener('click', () => resetCharacterLeftText());
 
