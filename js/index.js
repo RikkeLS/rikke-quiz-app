@@ -3,8 +3,8 @@ console.clear()
 // query selection:
 // const bookmark = document.querySelector('[data-js="card__bookmark"]');
 const bookmarks = document.querySelectorAll('[data-js="card__bookmark"]');
-const answerButton = document.querySelector('[data-js="card__button-answer"]');
-const answerToHide = document.querySelector('[data-js="card__answer"]');
+const answerButtons = document.querySelectorAll('[data-js="card__button-answer"]');
+const answersToHide = document.querySelectorAll('[data-js="card__answer"]');
 
 
 
@@ -27,14 +27,19 @@ bookmarks.forEach( bookmark => {
 
 
 // click event for answer button, for hiding answer and change button text:
-answerButton.addEventListener('click', (event) => {
-    answerToHide.toggleAttribute('hidden')
-    
-    if (answerToHide.hidden==true) {
-        answerButton.textContent = 'Show Answer'
-    }
-    if (answerToHide.hidden==false) {
-        answerButton.textContent = 'Hide Answer'
-    }
-});
 
+answerButtons.forEach(answerButton => {    
+    answerButton.addEventListener('click', (event) => {
+        let answerButtonText='';
+        answersToHide.forEach(answerToHide => { answerToHide.toggleAttribute('hidden')
+ 
+        if (answerToHide.hidden===true) {
+            answerButtonText = 'Show Answer'
+        }
+        if (answerToHide.hidden===false) {
+            answerButtonText = 'Hide Answer'
+        }
+        });
+        answerButton.textContent = answerButtonText
+    });
+});
