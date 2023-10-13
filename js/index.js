@@ -4,8 +4,8 @@ console.clear()
 // const bookmark = document.querySelector('[data-js="card__bookmark"]');
 const bookmarks = document.querySelectorAll('[data-js="card__bookmark"]');
 const answerButtons = document.querySelectorAll('[data-js="card__button-answer"]');
-const answersToHide = document.querySelectorAll('[data-js="card__answer"]');
-
+// const answersToHide = document.querySelectorAll('[data-js="card__answer"]');
+const cards = document.querySelectorAll('[data-js="card"]');
 
 
 bookmarks.forEach( bookmark => {
@@ -28,18 +28,19 @@ bookmarks.forEach( bookmark => {
 
 // click event for answer button, for hiding answer and change button text:
 
-answerButtons.forEach(answerButton => {    
+
+
+cards.forEach(card => {   
+    const answerButton = card.querySelector('[data-js="card__button-answer"]');
+    const answerToHide = card.querySelector('[data-js="card__answer"]');
     answerButton.addEventListener('click', (event) => {
-        let answerButtonText='';
-        answersToHide.forEach(answerToHide => { answerToHide.toggleAttribute('hidden')
- 
-        if (answerToHide.hidden===true) {
-            answerButtonText = 'Show Answer'
+        answerToHide.toggleAttribute('hidden')
+        
+        if (answerToHide.hidden==true) {
+            answerButton.textContent = 'Show Answer'
         }
-        if (answerToHide.hidden===false) {
-            answerButtonText = 'Hide Answer'
+        if (answerToHide.hidden==false) {
+            answerButton.textContent = 'Hide Answer'
         }
-        });
-        answerButton.textContent = answerButtonText
     });
 });
